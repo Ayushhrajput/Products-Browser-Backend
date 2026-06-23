@@ -21,8 +21,9 @@ const generateProducts = async () => {
             const products = []
 
             for (let i = 0; i < BATCH_SIZE; i++) {
+                const productNumber = batch * BATCH_SIZE + i;
                 products.push({
-                    name: `Product ${i}`,
+                    name: `Product ${productNumber}`,
                     category:
                         categories[
                             Math.floor(Math.random() * categories.length)
